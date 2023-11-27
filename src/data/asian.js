@@ -49,7 +49,7 @@ export const ASIAN_DISH = [
   {
     id: uuidv4(),
     image: asianRiceBowl,
-    title: "Pork Stir Fry",
+    title: "Ground Turkey Bowl",
     price: 23.99,
     description:
       "This easy Pork Stir Fry whips up in no time. Loaded with fresh veggies and tender pork, it’s a perfect weeknight dinner idea!",
@@ -57,7 +57,7 @@ export const ASIAN_DISH = [
   {
     id: uuidv4(),
     image: veggieNoodle,
-    title: "Sweet and Sour Pork",
+    title: "Greens soba",
     price: 22,
     description:
       "Sweet and Sour...what could be better, along with vegetables and tender pineapple pieces, this is a true masterpiece",
