@@ -20,165 +20,247 @@ import sushi_roll_platter from "../public/images/sushi-roll-platter.jpg";
 import vegan_bowl from "../public/images/vegan-buddha-bowl.jpg";
 import veggie_burger from "../public/images/veggie-burger.jpg";
 
+import { v4 as uuidv4 } from "uuid";
+
 export const FastFood = [
   {
-    id: "m1",
-    name: "Mac & Cheese",
-    price: "8.99",
+    id: uuidv4(),
+    image: mac_and_cheese,
+    title: "Mac & Cheese",
+    price: 8.99,
+    characteristic: ["pasta", "fastfood", "italian"],
+    cuisine: ["fastfood", "italian"],
     description:
       "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
-    image: beef_tacos,
+
+    //characteristic: ["pasta"],
   },
   {
-    id: "m2",
-    name: "Margherita Pizza",
-    price: "12.99",
+    id: uuidv4(),
+    image: margherita,
+    title: "Margherita Pizza",
+    price: 12.99,
+    characteristic: ["meat", "pizza"],
+    cuisine: ["fastfood", "italian"],
     description:
       "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-    image: margherita,
+
+    //characteristic: ["meat", "pizza", "fastfood", "italian"],
   },
   {
-    id: "m3",
-    name: "Caesar Salad",
-    price: "7.99",
+    id: uuidv4(),
+    image: caesar,
+    title: "Caesar Salad",
+    price: 7.99,
+    characteristic: ["meat", "salad", "seafood"],
+    cuisine: ["italian"],
     description:
       "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-    image: caesar,
+
+    //characteristic: ["meat", "salad", "seafood", 'italian'],
   },
   {
-    id: "m4",
-    name: "Spaghetti Carbonara",
-    price: "10.99",
+    id: uuidv4(),
+    image: spaghetti_carbonara,
+    title: "Spaghetti Carbonara",
+    price: 10.99,
+    characteristic: ["meat", "pasta"],
+    cuisine: ["italian"],
     description:
       "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
-    image: spaghetti_carbonara,
+
+    //characteristic: ["meat", "pasta", 'italian'],
   },
   {
-    id: "m5",
-    name: "Veggie Burger",
-    price: "9.99",
+    id: uuidv4(),
+    image: veggie_burger,
+    title: "Veggie Burger",
+    price: 9.99,
+    characteristic: ["burger"],
+    cuisine: ["vegeterian", "fastfood"],
     description:
       "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
-    image: veggie_burger,
+
+    //characteristic: ["burger","vegeterian", "fastfood"],
   },
   {
-    id: "m6",
-    name: "Grilled Chicken Sandwich",
-    price: "10.99",
+    id: uuidv4(),
+    image: grilled_sandwich,
+    title: "Grilled Chicken Sandwich",
+    price: 10.99,
+    characteristic: ["meat", "burger"],
+    cuisine: ["fastfood"],
     description:
       "Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.",
-    image: grilled_sandwich,
+
+    //characteristic: ["meat", "burger", 'fastfood],
   },
   {
-    id: "m7",
-    name: "Steak Frites",
-    price: "17.99",
+    id: uuidv4(),
+    image: steak,
+    title: "Steak Frites",
+    price: 17.99,
+    characteristic: ["meat"],
+    cuisine: ["bbq"],
     description:
       "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
-    image: steak,
+
+    //characteristic: ["meat", 'bbq'],
   },
   {
-    id: "m8",
-    name: "Sushi Roll Platter",
-    price: "15.99",
+    id: uuidv4(),
+    image: sushi_roll_platter,
+    title: "Sushi Roll Platter",
+    price: 15.99,
+    characteristic: ["spicy", "rice", "seafood", "shrimp", "oriental"],
+    cuisine: ["oriental"],
     description:
       "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
-    image: sushi_roll_platter,
+
+    //characteristic: ["spicy", "rice", "seafood", "shrimp"],
   },
   {
-    id: "m9",
-    name: "Chicken Curry",
-    price: "13.99",
+    id: uuidv4(),
+    image: chicken_curry,
+    title: "Chicken Curry",
+    price: 13.99,
+    characteristic: ["spicy", "meat", "oriental"],
+    cuisine: ["oriental"],
     description:
       "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
-    image: chicken_curry,
+
+    //characteristic: ["spicy", "meat"],
   },
   {
-    id: "m10",
-    name: "Vegan Buddha Bowl",
-    price: "11.99",
+    id: uuidv4(),
+    image: vegan_bowl,
+    title: "Vegan Buddha Bowl",
+    price: 11.99,
+    characteristic: ["salad"],
+    cuisine: ["vegeterian"],
     description:
       "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
-    image: vegan_bowl,
+
+    //characteristic: ["salad","vegeterian"],
   },
   {
-    id: "m11",
-    name: "Seafood Paella",
-    price: "19.99",
+    id: uuidv4(),
+    image: seafood_paella,
+    title: "Seafood Paella",
+    price: 19.99,
+    characteristic: ["rice", "seafood", "shrimp"],
+    cuisine: ["italian", "oriental"],
     description:
       "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
-    image: seafood_paella,
+
+    //characteristic: ["rice", "seafood", "shrimp", 'italian', 'oriental'],
   },
   {
-    id: "m12",
-    name: "Pancake Stack",
-    price: "8.99",
+    id: uuidv4(),
+    image: pancakes,
+    title: "Pancake Stack",
+    price: 8.99,
+    characteristic: ["pasta"],
+    cuisine: ["sweets"],
     description:
       "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
-    image: pancakes,
+
+    //characteristic: ["pasta", "sweets"],
   },
   {
-    id: "m13",
-    name: "Miso Ramen",
-    price: "12.99",
+    id: uuidv4(),
+    image: miso,
+    title: "Miso Ramen",
+    price: 12.99,
+    characteristic: ["spicy", "seafood", "shrimp", "vegeterian", "oriental"],
+    cuisine: ["vegeterian", "oriental"],
     description:
       "A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.",
-    image: miso,
+
+    //characteristic: ["spicy", "seafood", "shrimp"],
   },
   {
-    id: "m14",
-    name: "Beef Tacos",
-    price: "9.99",
+    id: uuidv4(),
+    image: beef_tacos,
+    title: "Beef Tacos",
+    price: 9.99,
+    characteristic: ["spicy", "meat", "fastfood", "mexican"],
+    cuisine: ["fastfood", "mexican"],
     description:
       "Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.",
-    image: beef_tacos,
+
+    //characteristic: ["spicy", "meat"],
   },
   {
-    id: "m15",
-    name: "Chocolate Brownie",
-    price: "5.99",
+    id: uuidv4(),
+    image: chocolate_brownie,
+    title: "Chocolate Brownie",
+    price: 5.99,
+    characteristic: ["dessert", "sweets"],
+    cuisine: ["sweets"],
     description:
       "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
-    image: chocolate_brownie,
+
+    //characteristic: ["dessert"],
   },
   {
-    id: "m16",
-    name: "Lobster Bisque",
-    price: "14.99",
+    id: uuidv4(),
+    image: lobster_bisque,
+    title: "Lobster Bisque",
+    price: 14.99,
+    characteristic: ["seafood", "shrimp", "mexican", "italian"],
+    cuisine: ["mexican", "italian"],
     description:
       "A creamy soup made from lobster stock, aromatic vegetables, and a touch of brandy.",
-    image: lobster_bisque,
+
+    //characteristic: ["seafood", "shrimp"],
   },
   {
-    id: "m17",
-    name: "Mushroom Risotto",
-    price: "13.99",
+    id: uuidv4(),
+    image: mushroom_riso,
+    title: "Mushroom Risotto",
+    price: 13.99,
+    characteristic: ["rice", "seafood", "vegeterian", "italian"],
+    cuisine: ["vegeterian", "italian"],
     description:
       "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
-    image: mushroom_riso,
+
+    //characteristic: ["rice", "seafood"],
   },
   {
-    id: "m18",
-    name: "Eggplant Parmesan",
-    price: "11.99",
+    id: uuidv4(),
+    image: eggplant_parmesan,
+    title: "Eggplant Parmesan",
+    price: 11.9,
+    characteristic: ["spicy", "salad", "vegeterian"],
+    cuisine: ["vegeterian"],
     description:
       "Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.",
-    image: eggplant_parmesan,
+
+    // characteristic: ["spicy", "salad"],
   },
   {
-    id: "m19",
-    name: "Lemon Cheesecake",
-    price: "6.99",
+    id: uuidv4(),
+    image: lemon_cheesecake,
+    title: "Lemon Cheesecake",
+    price: 6.99,
+    characteristic: ["dessert", "sweets"],
+    cuisine: ["sweets"],
     description:
       "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
-    image: lemon_cheesecake,
+
+    //characteristic: ["dessert"],
   },
   {
-    id: "m20",
-    name: "Falafel Wrap",
-    price: "8.99",
+    id: uuidv4(),
+    image: falafel,
+    title: "Falafel Wrap",
+    price: 8.99,
+    characteristic: ["salad", "vegeterian"],
+    cuisine: ["vegeterian"],
     description:
       "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
-    image: falafel,
+
+    //characteristic: ["salad"],
   },
 ];

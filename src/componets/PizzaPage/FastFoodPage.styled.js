@@ -6,11 +6,19 @@ export const Container = styled.div`
 
 export const ListItems = styled.ul`
   padding: 0;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 20px;
+`;
+
+export const StyledSelects = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   gap: 30px;
+  justify-content: flex-start;
 `;

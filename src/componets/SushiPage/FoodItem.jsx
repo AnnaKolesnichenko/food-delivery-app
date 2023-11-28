@@ -35,7 +35,13 @@ const FoodItem = ({ item }) => {
       <StyledInfo>
         <Title>{item.title}</Title>
         <Price>${item.price}</Price>
-        <Button type="button" onClick={() => cartCnxt.addItemToCart(item.id)}>
+        <Button
+          type="button"
+          onClick={() => {
+            cartCnxt.addItemToCart(item.id);
+            console.log(item);
+          }}
+        >
           Order
         </Button>
       </StyledInfo>

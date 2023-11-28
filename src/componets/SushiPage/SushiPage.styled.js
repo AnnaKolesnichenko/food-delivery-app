@@ -8,17 +8,17 @@ export const Container = styled.div`
 
 export const ListItems = styled.ul`
   padding: 0;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 20px;
 `;
 
 export const Item = styled.li`
-  width: 260px;
+  width: 240px;
   height: auto;
   list-style: none;
   /* margin-bottom: 10px; */
@@ -27,12 +27,20 @@ export const Item = styled.li`
   background-color: transparent;
 `;
 
+export const Selected = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+  justify-content: flex-start;
+`;
+
 export const StyledImage = styled.img.attrs((props) => ({
   style: {
     opacity: props.opacity || 1,
     display: "block",
-    width: "260px",
-    height: "330px",
+    width: "240px",
+    height: "300px",
     marginLeft: "auto",
     marginRight: "auto",
     borderRadius: "10px 10px 0px 0px",
@@ -48,7 +56,7 @@ export const StyledImage = styled.img.attrs((props) => ({
 // `;
 
 export const StyledInfo = styled.div`
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   background-color: #050401;
   border-radius: 0px 0px 10px 10px;

@@ -3,7 +3,7 @@ import { FaRegStar } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 
 export const Item = styled.li`
-  width: 260px;
+  width: 240px;
   height: auto;
   list-style: none;
   /* margin-bottom: 10px; */
@@ -16,7 +16,7 @@ export const StyledImage = styled.img.attrs((props) => ({
   style: {
     opacity: props.opacity || 1,
     display: "block",
-    width: "260px",
+    width: "240px",
     height: "auto",
     marginLeft: "auto",
     marginRight: "auto",

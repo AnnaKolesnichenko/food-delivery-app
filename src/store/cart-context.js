@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { ASIAN_DISH } from "../data/asian";
+import { FastFood } from "../data/available-meals";
 
 export const CartContext = createContext({
   items: [],
@@ -10,18 +11,43 @@ export const CartContext = createContext({
 export default function CartContextProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
-  const addItemToCart = (id) => {
-    const existingItem = cartItems.find((item) => item.id === id);
+  // const addItemToCart = (id) => {
+  //   const existingItem = cartItems.find((item) => item.id === id);
 
-    if (existingItem) {
-      setCartItems((prevCart) =>
-        prevCart.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-        )
-      );
+  //   if (existingItem) {
+  //     setCartItems((prevCart) =>
+  //       prevCart.map((item) =>
+  //         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+  //       )
+  //     );
+  //   } else {
+  //     const product = ASIAN_DISH.find((item) => item.id === id);
+  //     setCartItems((prevCart) => [{ ...product, quantity: 1 }, ...prevCart]);
+  //   }
+  // };
+
+  const addItemToCart = (id) => {
+    let product = ASIAN_DISH.find((item) => item.id === id);
+
+    if (!product) {
+      product = FastFood.find((item) => item.id === id);
+    }
+
+    if (product) {
+      const existingItem = cartItems.find((item) => item.id === id);
+
+      if (existingItem) {
+        setCartItems((prevCart) =>
+          prevCart.map((item) =>
+            item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+          )
+        );
+      } else {
+        setCartItems((prevCart) => [{ ...product, quantity: 1 }, ...prevCart]);
+      }
     } else {
-      const product = ASIAN_DISH.find((item) => item.id === id);
-      setCartItems((prevCart) => [{ ...product, quantity: 1 }, ...prevCart]);
+      // Handle case when the product with given id is not found in any array
+      console.log("Product not found");
     }
   };
 
