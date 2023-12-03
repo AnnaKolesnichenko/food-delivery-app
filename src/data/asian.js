@@ -79,7 +79,7 @@ export const ASIAN_DISH = [
   {
     id: uuidv4(),
     image: koreanStyle,
-    title: "Koren Bone Soup",
+    title: "Korean Bone Soup",
     price: 21.99,
     characteristic: ["spicy", "beef", "soup"],
     cuisine: ["korean"],
