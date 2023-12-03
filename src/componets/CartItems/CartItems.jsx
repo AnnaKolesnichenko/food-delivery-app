@@ -11,7 +11,7 @@ import {
 
 const CartItems = () => {
   const shopCnxt = useContext(CartContext);
-  console.log(shopCnxt.items);
+  // console.log(shopCnxt.items);
   return (
     <StyledListItems>
       {shopCnxt.items.map((item) => {

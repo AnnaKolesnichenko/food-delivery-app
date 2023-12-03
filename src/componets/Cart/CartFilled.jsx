@@ -1,6 +1,6 @@
 import { Button } from "./CartEmpty.styled";
 
-const CartFilled = ({ totalCost, handleCloseButton }) => {
+const CartFilled = ({ totalCost, handleCloseButton, handleCheckOutOpen }) => {
   return (
     <div
       style={{
@@ -13,7 +13,7 @@ const CartFilled = ({ totalCost, handleCloseButton }) => {
       <h2 style={{ fontSize: "16px" }}>Cart Total: ${totalCost}</h2>
       <div style={{ display: "flex", gap: "10px" }}>
         <Button
-          onClick={() => handleCloseButton()}
+          onClick={handleCheckOutOpen}
           type="button"
           style={{ width: "90px" }}
         >

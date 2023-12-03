@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Backdrop, Modal } from "./Cart.styled";
+import { Backdrop, Modal } from "../UI/CommonStyles.styled";
 import { CartContext } from "../../store/cart-context";
 import CartEmpty from "./CartEmpty";
 import CartFilled from "./CartFilled";
@@ -7,9 +7,10 @@ import CartFilled from "./CartFilled";
 import bg from "../../data/assets/b.jpeg";
 import CartItems from "../CartItems/CartItems";
 
-const Cart = ({ handleCloseButton }) => {
+const Cart = ({ handleCloseButton, handleCheckOutOpen }) => {
   const shopCnxt = useContext(CartContext);
   const [totalCost, setTotalCost] = useState(0);
+  // const [checkoutOpen, setCheckoutOpen] = useState(false);
 
   useEffect(() => {
     let total = 0;
@@ -18,6 +19,10 @@ const Cart = ({ handleCloseButton }) => {
     });
     setTotalCost(total);
   }, [shopCnxt.items]);
+
+  // const handleCheckoutOoen = () => {
+
+  // }
 
   return (
     <Backdrop>
@@ -45,6 +50,7 @@ const Cart = ({ handleCloseButton }) => {
             <CartFilled
               handleCloseButton={handleCloseButton}
               totalCost={totalCost.toFixed(2)}
+              handleCheckOutOpen={handleCheckOutOpen}
             />
           )}
           {/* <button onClick={handleCloseButton}>Close</button> */}

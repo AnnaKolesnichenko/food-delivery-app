@@ -37,7 +37,6 @@ const FastFoodItem = ({ item }) => {
           type="button"
           onClick={() => {
             cartCnxt.addItemToCart(item.id);
-            console.log(item);
           }}
         >
           Order

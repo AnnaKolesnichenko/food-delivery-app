@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   NavigationContainer,
   StyledNavLink,
@@ -9,9 +9,13 @@ import {
 
 import Cart from "../Cart/Cart";
 import { CartContext } from "../../store/cart-context";
+import CheckOut from "../CheckoutPage/CheckOut";
+import OrderAccepted from "../UI/OrderAccepted";
 
 const HeaderComponent = () => {
   const [cartOpen, setCartOpen] = useState(false);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [orderAccepted, setOrderAccepted] = useState(false);
   const cartCnxt = useContext(CartContext);
 
   const handleCartOpen = () => {
@@ -22,9 +26,37 @@ const HeaderComponent = () => {
     setCartOpen(!cartOpen);
   };
 
+  const handleCheckOutOpen = () => {
+    setCartOpen(!cartOpen);
+    setCheckoutOpen(true);
+  };
+
+  const handleCheckClose = () => {
+    setCheckoutOpen(false);
+    setOrderAccepted(true);
+  };
+
+  useEffect(() => {
+    let timeout;
+    if (orderAccepted) {
+      timeout = setTimeout(() => {
+        setOrderAccepted(false);
+      }, 3000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [orderAccepted]);
+
   return (
     <NavigationContainer>
-      {cartOpen && <Cart handleCloseButton={handleCloseButton} />}
+      {cartOpen && (
+        <Cart
+          handleCloseButton={handleCloseButton}
+          handleCheckOutOpen={handleCheckOutOpen}
+        />
+      )}
+      {checkoutOpen && <CheckOut handleCheckClose={handleCheckClose} />}
+      {orderAccepted && <OrderAccepted />}
       <div style={{ width: "120px", marginRight: "55px" }}>
         <StyledNavLink to="/">Food Culture</StyledNavLink>
       </div>
