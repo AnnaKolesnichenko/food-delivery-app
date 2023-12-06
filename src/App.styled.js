@@ -27,6 +27,7 @@ export const StyledNavLinkMenu = styled(NavLink)`
   color: #fefae3;
   font-size: 12px;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding-top: 7px;
@@ -50,6 +51,7 @@ export const StyledNavLink = styled(Link)`
   color: #fefae3;
   font-size: 24px;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: 10px;
   padding-top: 7px;

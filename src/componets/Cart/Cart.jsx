@@ -34,7 +34,7 @@ const Cart = ({ handleCloseButton, handleCheckOutOpen }) => {
         }}
       >
         <div>
-          <h1>Your Cart</h1>
+          <h1 style={{ fontFamily: "Raleway, sans-serif" }}>Your Cart</h1>
           <div>
             {shopCnxt.items.length > 0 ? (
               <CartItems />

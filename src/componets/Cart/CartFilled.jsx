@@ -10,7 +10,9 @@ const CartFilled = ({ totalCost, handleCloseButton, handleCheckOutOpen }) => {
         alignItems: "flex-end",
       }}
     >
-      <h2 style={{ fontSize: "16px" }}>Cart Total: ${totalCost}</h2>
+      <h2 style={{ fontSize: "16px", fontFamily: "Raleway, sans-serif" }}>
+        Cart Total: ${totalCost}
+      </h2>
       <div style={{ display: "flex", gap: "10px" }}>
         <Button
           onClick={handleCheckOutOpen}
