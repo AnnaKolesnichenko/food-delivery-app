@@ -64,6 +64,7 @@ export const StyledInfo = styled.div`
 
 export const Title = styled.h2`
   font-size: 16px;
+  font-family: "Raleway", sans-serif;
   color: #d5cfc7;
   margin: 0;
   margin-bottom: 12px;
@@ -74,6 +75,7 @@ export const Price = styled.p`
   padding: 7px 5px;
   margin: 20px auto;
   font-size: 14px;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 7px;
   color: #e37f19;
@@ -86,8 +88,9 @@ export const Button = styled.button`
   margin-top: 10px;
   border: none;
   padding: 10px 7px;
-  border-radius: 13px;
-  font-size: 12px;
+  border-radius: 7px;
+  font-size: 12 4px;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   background-color: #d5cfc7;

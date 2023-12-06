@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 16px;
+  font-family: "Raleway", sans-serif;
 `;
 
 export const Button = styled.button`
@@ -21,6 +22,7 @@ export const Button = styled.button`
   border-radius: 5px;
   padding: 10px 20px;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
 
   &:hover {
     border-radius: 0px 0px 0px 0px;

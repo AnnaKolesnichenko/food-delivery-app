@@ -9,7 +9,9 @@ export const StyledOrderDiv = styled.div`
   border-radius: 10px;
 `;
 
-export const StyledOrderTitle = styled.h1``;
+export const StyledOrderTitle = styled.h1`
+  font-family: "Raleway", sans-serif;
+`;
 
 export const StyledTickIcon = styled(FcCheckmark)`
   width: 40px;

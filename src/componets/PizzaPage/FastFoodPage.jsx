@@ -51,6 +51,7 @@ const FastFoodPage = () => {
       backgroundColor: "#D5CFC7",
       borderRadius: "15px",
       color: "#1C180A",
+      fontFamily: "Raleway, sans-serif",
 
       "&:hover": {
         border: "1px solid #24485b",
@@ -62,9 +63,11 @@ const FastFoodPage = () => {
       backgroundColor: "#f2f2f2",
       borderRadius: "4px",
       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+      fontFamily: "Raleway, sans-serif",
     }),
     option: (provided, state) => ({
       ...provided,
+      fontFamily: "Raleway, sans-serif",
       backgroundColor: state.isSelected ? "#1e90ff" : "transparent",
       color: state.isSelected ? "#ffffff" : "#333333",
       "&:hover": {
