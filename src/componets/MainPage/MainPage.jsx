@@ -19,9 +19,9 @@ const MainPage = () => {
       }}
     >
       <LinkContainer>
-        <StyledLink to="sushi">asian food</StyledLink>
-        <StyledLink to="pizza">fast food</StyledLink>
-        <StyledLink to="salads">simple food</StyledLink>
+        <StyledLink to="/sushi">asian food</StyledLink>
+        <StyledLink to="/pizza">fast food</StyledLink>
+        <StyledLink to="/salads">simple food</StyledLink>
       </LinkContainer>
     </Container>
   );
