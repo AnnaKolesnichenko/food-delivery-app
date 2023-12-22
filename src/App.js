@@ -40,12 +40,12 @@ function App() {
         </NavigationContainer> */}
         <HeaderComponent />
         <Routes>
-          <Route path="/" element={<MainPage />} />
-
-          <Route path="sushi" element={<SushiPage />} />
-          <Route path="pizza" element={<FastFoodPage />} />
-          <Route path="salads" element={<SaladsPage />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<MainPage />}>
+            <Route path="sushi" element={<SushiPage />} />
+            <Route path="pizza" element={<FastFoodPage />} />
+            <Route path="salads" element={<SaladsPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </ContainerMain>
     </CartContextProvider>
