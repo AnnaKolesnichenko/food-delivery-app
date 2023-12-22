@@ -46,7 +46,7 @@ function App() {
           <Route path="/sushi" element={<SushiPage />} />
           <Route path="/pizza" element={<FastFoodPage />} />
           <Route path="/salads" element={<SaladsPage />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </ContainerMain>
     </CartContextProvider>
